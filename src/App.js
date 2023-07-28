@@ -4,15 +4,9 @@ import { FaPlus, FaMinus, FaTrash, FaCheck } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
 
-const data = [
-  { name: "Socks", quantity: 3, selected: false },
-  { name: "Pen", quantity: 1, selected: false },
-  { name: "Shampoo", quantity: 2, selected: false },
-];
-
 function App() {
   const [text, setText] = useState("");
-  const [newItem, setNewItem] = useState(data);
+  const [newItem, setNewItem] = useState([]);
 
   function handleAddItem(item) {
     setNewItem((items) => [...items, item]);
